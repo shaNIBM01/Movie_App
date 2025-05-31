@@ -15,6 +15,7 @@ class HomeViewModel : ViewModel() {
     // Store all fetched movies for reuse when filtering
     private var allMovies: List<Movie> = emptyList()
 
+
     // Simplified genre map for your 3 genres
     private val genreMap = mapOf(
         28 to "Action",
