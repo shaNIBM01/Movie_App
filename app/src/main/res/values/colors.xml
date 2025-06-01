@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Dark theme background colors -->
+    <color name="background_primary">#121B22</color>  <!-- Main background -->
+    <color name="background_secondary">#1F2C34</color>  <!-- Cards, input boxes -->
+
+    <!-- Surface colors (Cards, App Bars) -->
+    <color name="surface">#1E2C33</color>
+    <color name="surface_variant">#263238</color>
+
+    <!-- Accent colors -->
+    <color name="whatsapp_green">#25D366</color> <!-- WhatsApp primary green -->
+    <color name="accent">#00A884</color> <!-- Slightly richer version of green -->
+
+    <!-- Text colors -->
+    <color name="text_primary">#EDEDED</color>
+    <color name="text_secondary">#B1B3B5</color>
+    <color name="text_disabled">#6C7377</color>
+
+    <!-- Icons and dividers -->
+    <color name="icon_tint">#B0BEC5</color>
+    <color name="divider">#263238</color>
+
+    <!-- Notification / alert colors -->
+    <color name="error">#CF6679</color>
+    <color name="warning">#FBC02D</color>
+    <color name="info">#29B6F6</color>
 </resources>

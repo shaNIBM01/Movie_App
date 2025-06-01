@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileFragment"
+    android:background="@color/background_primary"
     android:padding="16dp"
-    android:background="@android:color/transparent">
+    tools:context=".ui.profile.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,78 +14,62 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <!-- Profile Picture -->
+        <!-- Profile Image -->
         <ImageView
-            android:id="@+id/profileImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/ic_profile_placeholder"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="16dp"
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_profile"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/profile_image"
             android:scaleType="centerCrop"
-            android:background="@android:color/transparent"
-            android:padding="4dp"
-            android:contentDescription="Profile Image" />
+            android:background="@drawable/circle_background"
+            android:padding="4dp" />
 
-        <!-- User Name -->
+        <!-- Name -->
         <TextView
-            android:id="@+id/profileName"
+            android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="Hathurusinghe Mudiyanselage"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:text="@string/profile_name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp" />
 
-        <!-- User Email -->
+        <!-- Email -->
         <TextView
-            android:id="@+id/profileEmail"
+            android:id="@+id/profile_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="hathuru.mudiyanselage@demoapp.com"
-            android:textColor="#757575"
-            android:textSize="14sp" />
+            android:text="@string/profile_email"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="4dp" />
 
-        <!-- Profile Options -->
+        <!-- Vertical Buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@android:color/white"
-            android:elevation="2dp"
-            android:padding="16dp"
-            android:layout_marginBottom="32dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@android:color/transparent"
-            android:clipToPadding="false"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="4dp"
-            android:radius="8dp">
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal">
 
-            <Button
-                android:id="@+id/btnEditProfile"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/edit_profile_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Edit Profile"
+                android:text="@string/edit_profile"
+                android:backgroundTint="@color/whatsapp_green"
+                android:textColor="@color/black"
                 android:layout_marginBottom="12dp" />
 
-            <Button
-                android:id="@+id/btnSettings"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Settings"
-                android:layout_marginBottom="12dp" />
-
-            <Button
-                android:id="@+id/btnLogout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:backgroundTint="#D32F2F"
-                android:textColor="#FFFFFF"/>
+                android:text="@string/logout"
+                android:backgroundTint="@color/whatsapp_green"
+                android:textColor="@color/black" />
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

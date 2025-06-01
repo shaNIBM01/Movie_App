@@ -1,21 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.shanaka.zzz_movies.ui.home.HomeFragment"
-        android:label="Home" />
+        android:id="@+id/nav_home"
+        android:name="com.shanaka.zmovies.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_details"
+            app:destination="@id/nav_details" />
+    </fragment>
 
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.shanaka.zzz_movies.ui.profile.ProfileFragment"
-        android:label="Profile" />
+        android:id="@+id/nav_search"
+        android:name="com.shanaka.zmovies.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_nav_search_to_nav_details"
+            app:destination="@id/nav_details" />
+    </fragment>
 
     <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.shanaka.zzz_movies.ui.search.SearchFragment"
-        android:label="Search" />
+        android:id="@+id/nav_profile"
+        android:name="com.shanaka.zmovies.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- Add DetailsFragment with argument -->
+    <fragment
+        android:id="@+id/nav_details"
+        android:name="com.shanaka.zmovies.ui.details.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="movie"
+            app:argType="com.shanaka.zmovies.data.model.Movie"
+            app:nullable="false"/>
+    </fragment>
+
 </navigation>

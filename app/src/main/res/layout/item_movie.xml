@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
     android:layout_marginBottom="12dp"
-    android:background="#1C1C1E">
+    android:layout_marginHorizontal="8dp"
+    android:elevation="4dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardBackgroundColor="@color/background_secondary">
 
-    <!-- Movie Poster -->
-    <ImageView
-        android:id="@+id/imageSearchMoviePoster"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="Movie Poster"
-        android:background="?attr/selectableItemBackground"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Movie Title -->
-    <TextView
-        android:id="@+id/textSearchMovieTitle"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Movie Title"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:maxLines="2"
-        android:ellipsize="end"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/imageSearchMoviePoster"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/movie_poster"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_no_image"
+            android:contentDescription="@string/movie_poster" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Movie Title"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

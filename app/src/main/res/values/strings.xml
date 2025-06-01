@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">zZz_Movies</string>
+    <string name="app_name">Zmovies</string>
+    <string name="movie_poster">Movie Poster</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="profile_name">Hathurusingha Mudiyanselage</string>
+    <string name="profile_email">hathuru.mudiyanselage@outlook.com</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="all">All</string>
+    <string name="action">Action</string>
+    <string name="comedy">Comedy</string>
+    <string name="drama">Drama</string>
+    <string name="search_movies">Search Movies...</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_rating">Movie Rating</string>
+    <string name="movie_release">Movie Release</string>
+    <string name="movie_genres">Movie Genres</string>
+    <string name="movie_overview">Movie Overview</string>
 </resources>
